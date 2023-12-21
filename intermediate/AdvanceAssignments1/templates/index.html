@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Application</title>
+</head>
+<body>
+    <div id="notification"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        socket.on('notification', function(message) {
+            var notificationDiv = document.getElementById('notification');
+            notificationDiv.innerHTML += '<p>' + message + '</p>';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" href="#" />
+
+    </head>
+   <body>
+   
+      <table border = 4>
+         <thead>
+            <td>Rows No</td>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>class</td>
+            <td>TotalsMarks</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+               <td> {{row[3]}}</td>
+               <td>{{row[4]}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
